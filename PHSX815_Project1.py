@@ -86,12 +86,6 @@ d={'#steps':np.array(steps), '#position':np.array(position)}
 df=pd.DataFrame(d)
 df.to_csv(r'/home/vishakha/Documents/python/random_walk.csv', index = False)
 
-data=np.loadtxt(r'/home/vishakha/Documents/python/random_walk.csv', delimiter=',')
-a=data[:,0]
-b=data[:,1]
-plt.plot(a,b)
-plt.show()
-
 # Likelihood for binomial distribution
 
 P=(((math.factorial(n_steps))*((step_prob)**(n_steps-nl))*((1-step_prob)**(nl)))/((math.factorial(nl))*(math.factorial(n_steps-nl))))
